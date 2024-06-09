@@ -1,0 +1,14 @@
+ {
+ "options" : [
+  { "value": "HTML", "label": "HTML" },
+  { "value": "CSS", "label": "CSS" },
+  { "value": "JavaScript", "label": "JavaScript" },
+  { "value": "React", "label": "React" },
+  { "value": "Python", "label": "Python" },
+  { "value": "Java", "label": "Java" },
+  { "value": "MongoDB", "label": "MongoDB" },
+  { "value": "C++", "label": "C++" },
+  { "value": "C#", "label": "C#" },
+  { "value": "Node", "label": "Node" }
+]
+ }
