@@ -4,6 +4,8 @@ import "dotenv/config";
 import connectToDB from "./database/connectToDB.js"
 import router from "./api/index.js"
 import cookieParser from "cookie-parser";
+import path from "path";
+ const __dirname = path.resolve();
 
 const PORT = 3001;
 const app = express();
@@ -29,7 +31,7 @@ app.use("/api", router);
 
 
 app.get("/", (req, res) => {
-  res.json({ message: "Server running successfully" });
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 
 
