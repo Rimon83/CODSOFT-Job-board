@@ -25,9 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // api endpoint
-// app.use("/api", router);
-//deploying
-app.use("/api", path.join(__dirname, "api", "index.js"));
+app.use("/api", router);
 
 
 if (process.env.NODE_ENV === "production"){
