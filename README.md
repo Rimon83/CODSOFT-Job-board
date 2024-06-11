@@ -1,9 +1,9 @@
-To run this App, in the root, run these codes:
-npm run client-install
-npm  run server-install
-npm install
-
-then ready to run the App:
+To run this App, in the root, run these codes:<br />
+npm run client-install <br />
+npm  run server-install <br />
+npm install <br />
+<br />
+then ready to run the App: <br />
 npm run dev
 
 
