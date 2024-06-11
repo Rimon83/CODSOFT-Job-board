@@ -11,8 +11,8 @@
       "dest": "index.js"
     },
     {
-      "src": "/client/(.*)",
-      "dest": "/client/build/$1"
+      "src": "/client/src/routes/(.*)",
+      "dest": "/client/build"
     }
   ]
 }
