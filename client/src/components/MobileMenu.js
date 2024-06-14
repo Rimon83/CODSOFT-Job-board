@@ -105,7 +105,11 @@ const MobileMenu = ({isOpen, setIsOpen}) => {
           </li>
 
           <li className="hover:bg-gray-600 w-full p-2">
-            <Link className="hover:opacity-[0.6]" to="/login">
+            <Link
+              className="hover:opacity-[0.6]"
+              to="/dashboard/employer/post-job"
+              onClick={handleLinkAfterClicking}
+            >
               Post A job
             </Link>
           </li>
@@ -114,6 +118,7 @@ const MobileMenu = ({isOpen, setIsOpen}) => {
               <Link
                 className=" py-1.5 px-3 mt-[1.5rem] border-2 border-gray-400 hover:bg-white/50  rounded"
                 to="/login"
+                onClick={handleLinkAfterClicking}
               >
                 Login
               </Link>

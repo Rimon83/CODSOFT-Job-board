@@ -10,10 +10,9 @@ const updateUserInfo = async (req, res) => {
 
     let appliedList;
     let savedList;
-    const userInformation = await User.findById(user._id);
 
-
-    const updateUser = await User.updateOne(
+let updateUser
+    updateUser = await User.updateOne(
       { _id: user._id },
       {
         name:userInfo?.name,
@@ -21,12 +20,16 @@ const updateUserInfo = async (req, res) => {
         resume: userInfo?.resume
       }
     );
+            const userInformation = await User.findById(user._id);
+
 
     appliedList = userInformation.applied;
     savedList = userInformation.saved
 
+
     // saved job
-    if (state && !saved || state && saved) {
+    if (state && saved === false || state && saved === true) {
+
       if (!saved){
         savedList = [...savedList, state]
 
@@ -34,7 +37,7 @@ const updateUserInfo = async (req, res) => {
         const index = savedList.indexOf(String(state._id))
         savedList.splice(index, 1)
       }
-       const updateUser = await User.updateOne(
+       updateUser = await User.updateOne(
          { _id: user._id },
          {
            saved: savedList,
@@ -46,13 +49,14 @@ const updateUserInfo = async (req, res) => {
     // applied job
     if (state && userInfo) {
       appliedList = [...appliedList, state];
-      const updateUser = await User.updateOne(
+       updateUser = await User.updateOne(
         { _id: user._id },
         {
           applied: appliedList,
         }
       );
     }
+
 
     return res.json({
       message: "user update successfully",

@@ -12,8 +12,8 @@ const Employer = () => {
               pathname === "/dashboard/employer/post-job" ? "underline" : ""
             } text-black text-center ml-[2rem] p-1 rounded-l-sm`}
           >
-            <Link to={"/dashboard/employer/post-job"}>Post A job</Link>
-          </li>
+            <Link to={"/dashboard/employer/post-job"}>Post A job</Link>          
+            </li>
           <li
             className={`${
               pathname === "/dashboard/employer/my-post" ? "underline" : ""
@@ -23,7 +23,7 @@ const Employer = () => {
           </li>
         </ul>
       </nav>
-      <Outlet />
+        <Outlet />
     </div>
   );
 }

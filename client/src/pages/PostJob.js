@@ -247,10 +247,9 @@ const PostJob = () => {
               </label>
             </div>
           </div>
-          <input
-            className="my-[2rem] bg-green-400 rounded px-8 py-2 cursor-pointer hover:bg-green-300 hover:text-black text-white"
+          <button className="my-[2rem] bg-green-400 rounded px-8 py-2 cursor-pointer hover:bg-green-300 hover:text-black text-white"
             type="submit"
-          />
+          >Create</button>
         </form>
       </div>
     </div>

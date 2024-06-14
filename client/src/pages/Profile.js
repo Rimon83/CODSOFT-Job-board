@@ -33,7 +33,7 @@ const Profile = () => {
         email, 
         resume
       })
-    }, [name, email, resume])
+    }, [name, resume, email])
 
     useEffect(() => {
       if (resumeLoading) {
@@ -112,10 +112,9 @@ const Profile = () => {
       });
 
       toast.success(response?.data?.message);
-
-      if (response.data.success) {
-        dispatch(setUser(response.data.data));
-      }
+      const data = await response?.data?.data;
+      dispatch(setUser(data));
+      
     } catch (error) {
       console.log(error);
       toast.error();

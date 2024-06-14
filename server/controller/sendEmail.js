@@ -26,7 +26,7 @@ const sendEmail = async (req, res) => {
     to: email,
     subject: "Application",
     html: `
-    <div style="background-color: #AFAFAF; color:#000; padding: 20px; border-radius:10px; text-align:center">
+    <div style="background-color: #AFAFAF; color:#000; padding: 4rem; border-radius:10px; text-align:center">
     <h1>${jobTitle}</h1>
     <h2>Thank you for applying</h2>
     <p>The application is sent to ${companyName}. Good Luck</p>

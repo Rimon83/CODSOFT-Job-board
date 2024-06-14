@@ -93,7 +93,6 @@ const Apply = () => {
     const URL = `${process.env.REACT_APP_BACKEND_URL}/api/update-info`;
     const EMAIL_URL = `${process.env.REACT_APP_BACKEND_URL}/api/send-email`;
 
-
     try {
       const response = await axios({
         method: "post",
